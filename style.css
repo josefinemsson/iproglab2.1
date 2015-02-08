@@ -1,0 +1,21 @@
+body {
+background-color: fff;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h1 {
+color: #000;
+}
+.btn-default 
+{
+	background-color: #333333;
+	color: #ffffff;
+}
+.btn-default:disabled
+{
+	color:#000;
+}
+.dishhead
+{
+	padding:10px;
+	color: #fff;
+}
