@@ -10,22 +10,12 @@ var ExampleView = function (container,model) {
 	this.totalCost = container.find("#totalCost");
 	this.dishName = container.find("#dishName");
 	this.dishPrice = container.find("#dishPrice");
-	this.allDishes = container.find("#allDishes");
 
 	this.numberOfGuests.html(model.getNumberOfGuests);
 	this.totalCost.html(model.getNumberOfGuests);
-	this.dishName.html(model.getSelectedDish);
+	this.dishName.html(model.addDishToMenu(100));
 	this.dishPrice.html(model.getDishPrice);
-	this.allDishes.html(this.getDishes);
-
-	var getDishes=function()
-	{
-		return "hejehehe";
-
-	};
 
 
-	//Den här måste skrivas som en for-loop då det kommer plockas ut många namn
-//Vi måste sedan göra detsamam för image samt för beskrivning av maträtten
 }
  

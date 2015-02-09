@@ -2,7 +2,7 @@
 var DinnerModel = function() {
 
 	var guestNumb = 3;
-	var chosenDishes = ["Pending"];
+	var chosenDishes = [];
 	var dishPrice=0;
  
 	//TODO Lab 2 implement the data structure that will hold number of guest
@@ -23,6 +23,7 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		//TODO Lab 2
+
 		return chosenDishes;
 	}
 
@@ -52,6 +53,14 @@ var DinnerModel = function() {
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2 
+		for(i=0;i<dishes.length;i++){
+			var dish=dishes[i];
+			if(dish.id === id){
+				chosenDishes.push(dish);
+			}
+		}
+
+		return chosenDishes;
 	}
 
 	//Removes dish from menu

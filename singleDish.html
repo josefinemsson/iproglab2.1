@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner</title>
+    <title>Food</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -50,34 +50,18 @@
 
 					<center><input class="btn btn-default" type="submit" value="Confirm Dinner"></center>
 				</div>
-				<div class="col-md-10">
-					<div class="dishhead" style="background-color:#3d5c00;">
-						<h4>Select Dish</h4>
-						<div class="row">
-							<div class="col-md-4">
-	    						<div class="input-group">
-	      							<input type="text" class="form-control" placeholder="Search for...">
-	      							<span class="input-group-btn">
-	        							<button class="btn btn-default" type="button">Go!</button>
-	      							</span>
-	   		 					</div>
+				<div id='singleDishView' class="col-md-10">
+					<div class="row">
+						<div id="left" class="col-md-5">
+							
+						</div>
+
+						<div id="right" class="col-md-5">
+
 							</div>
-							<div class="col-md-4">
-								<div class="dropdown">
-	  								<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Choose course <span class="caret"></span>
-	  								</button>
-	  								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-	    								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Main</a></li>
-	    								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Starter</a></li>
-	    								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dessert</a></li>
-	    					 		</ul>
-	    						</div>
-							</div>
+
 						</div>
 					</div>
-					<div id="dishSelectView">
-						<span id="allDishes"></span>
-					</div>	
 				</div>
 			</div>
 		</div>
@@ -93,5 +77,6 @@
 	<script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
 	<script src="js/view/dishSelectView.js"></script>
+	<script src="js/view/singleDishView.js"></script>
   </body>
 </html>
