@@ -20,7 +20,23 @@ color: #000;
 	color: #fff;
 }
 
-.hej
+#ingredientBottom
 {
-	color: yellow;
+	border-top: 5px;
+	border-color: #000;
+}
+
+#right 
+{
+	background-color: #5a1f00;
+	color: #fff;
+	padding-bottom: 20px;
+}
+
+
+#iPrice
+{
+	padding-bottom: 10px;
+	border-bottom: 5px;
+	border-color: #000;
 }
