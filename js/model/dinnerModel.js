@@ -1,10 +1,10 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
 
-	var guestNumb = 3;
-	var chosenDishes = [];
-	var dishPrice=0;
- 
+	var guestNumb = 4;
+	var chosenDishes = new Object();
+
+
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
@@ -23,19 +23,36 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		//TODO Lab 2
+		var id = chosenDishes.type;
+		var dish = this.getDish(id);
 
-		return chosenDishes;
+		return dish;
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		//TODO Lab 2
-
+		return chosenDishes;
 	}
 
-	this.getDishPrice = function() {
-		//TODO Lab 2		
-		return dishPrice;
+	this.getDishPrice = function(id) {
+
+		var dishPrice = 0;
+		
+		for(i=0;i<dishes.length;i++){
+			var dish = dishes[i];
+
+			if (dish.id === id) {
+				var ingredients = dish.ingredients;
+
+				for (j=0;j<ingredients.length;j++){
+					var ingredient = ingredients[j];
+					dishPrice += ingredient.price;
+				}
+			}
+		}
+
+		return dishPrice*guestNumb;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
@@ -46,26 +63,44 @@ var DinnerModel = function() {
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
-		
+		var price = 0;
+		if('starter' in chosenDishes){
+			var starterid = chosenDishes.starter;
+			var starterPrice = this.getDishPrice(starterid)
+			price += starterPrice;
+		}
+
+		if('main' in chosenDishes){
+			var mainid = chosenDishes.main;
+			var mainPrice = this.getDishPrice(mainid)
+			price += mainPrice;
+		}
+
+		if('dessert' in chosenDishes){
+			var dessertid = chosenDishes.dessert;
+			var dessertPrice = this.getDishPrice(dessertid)
+			price+= dessertPrice;
+		}
+
+		return price;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2 
-		for(i=0;i<dishes.length;i++){
-			var dish=dishes[i];
-			if(dish.id === id){
-				chosenDishes.push(dish);
-			}
-		}
-
-		return chosenDishes;
+		var dish = this.getDish(id);
+		var dishType = dish.type;
+		chosenDishes[dishType] = id;
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
-		//TODO Lab 2
+	var dish = this.getDish(id);
+	var type = dish.type; 
+	if(chosenDishes[type] === id) {
+		delete chosenDishes[type];
+		}
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
@@ -187,7 +222,7 @@ var DinnerModel = function() {
 		},{
 		'id':100,
 		'name':'Meat balls',
-		'type':'main dish',
+		'type':'main',
 		'image':'meatballs.jpg',
 		'description':"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.",
 		'ingredients':[{ 
@@ -249,7 +284,7 @@ var DinnerModel = function() {
 		},{
 		'id':101,
 		'name':'MD 2',
-		'type':'main dish',
+		'type':'main',
 		'image':'bakedbrie.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
@@ -271,7 +306,7 @@ var DinnerModel = function() {
 		},{
 		'id':102,
 		'name':'MD 3',
-		'type':'main dish',
+		'type':'main',
 		'image':'meatballs.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
@@ -293,7 +328,7 @@ var DinnerModel = function() {
 		},{
 		'id':102,
 		'name':'MD 4',
-		'type':'main dish',
+		'type':'main',
 		'image':'meatballs.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 

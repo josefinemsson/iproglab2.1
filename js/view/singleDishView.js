@@ -71,7 +71,7 @@ var SingleDishView = function (container,model) {
 	print2+='<div id="ingredientBottom">';
 	print2+='<div class="col-md-7"><input class="btn btn-default" type="submit" value="Confirm Dish"></div>';
 
-	print2+='<div class="col-md-3">SEK	'+totPrice+'</div>';
+	print2+='<div class="col-md-3">SEK	'+totPrice+'<br /></div>';
 	print2+='</div>';
 
 	};
