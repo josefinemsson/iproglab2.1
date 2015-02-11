@@ -14,8 +14,8 @@ var ExampleView = function (container,model) {
 
 
 	model.addDishToMenu(200);
-	model.addDishToMenu(2);
-	model.addDishToMenu(100);
+	model.addDishToMenu(3);
+	model.addDishToMenu(101);
 
 //	model.removeDishFromMenu(2);
 
@@ -31,19 +31,19 @@ var ExampleView = function (container,model) {
 			var starterid = chosenDishes.starter;
 			var starter = model.getDish(starterid);
 			var starterName = starter.name;
-			print+= '<button id="remove" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span></button> '+starterName.substr(0, 20)+'<br />';
+			print+= '<button id="remove" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span></button> '+starterName.substr(0, 30)+'<br />';
 		}
 
 		if('main' in chosenDishes){
 			var mainid = chosenDishes.main;
 			var main = model.getDish(mainid);
-			print+= '<button id="remove" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span></button> '+main.name.substr(0, 20)+'<br />';
+			print+= '<button id="remove" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span></button> '+main.name.substr(0, 30)+'<br />';
 		}
 
 		if('dessert' in chosenDishes){
 			var dessertid = chosenDishes.dessert;
 			var dessert = model.getDish(dessertid);
-			print+= '<button id="remove" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span></button> '+dessert.name.substr(0, 20)+'<br />';
+			print+= '<button id="remove" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span></button> '+dessert.name.substr(0, 30)+'<br />';
 		}
 
 		return print;
