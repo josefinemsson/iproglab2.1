@@ -14,16 +14,17 @@
   <body>
 
 	<div class="container-fluid">
-		<div id="exampleView">
 			<div class="row">
-  				<div class="col-md-12" style="background-color:#d3d3d3;">
-					<h1>Homelette <small>From the best chefs in the world directly into your kitchen NOT</small></h1>
+  				<div id="header" class="col-md-12">
+					<h1>Homelette <h1 class="small">From the best chefs in the world directly into your kitchen NOT</h1></h1>
 				</div> 
 			</div>
 			<div class="row">
-				<div class="col-md-2">
-					<h4>My Dinner</h4>
-					People
+				<div id="exampleView" class="col-md-3">
+					<br />
+					<h2>My Dinner</h2>
+					<br /><br />
+					<h4>People</h4>
 					 <button type="button" class="btn btn-default btn-xlg" disabled="disabled"><span id="numberOfGuests"></span></button>
 					 <div class="btn-group-vertical" role="group" aria-label="...">
 	         			<button id="minusGuest" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-chevron-up"></span></button>
@@ -33,30 +34,29 @@
 					<br />
 
 					<div style="width:100%;padding:5% 0 5% 0;">
-						<div style="width:80%;float:left;background-color:#d3d3d3;">Dish Name</div>
-						<div style="width:20%;float:right;background-color:#d3d3d3;">Cost</div>
-					</div>
+					<div style="width:80%;float:left;background-color:#e7f9fe;padding-bottom:3px;padding-left:5px;">Dish Name</div>
+					<div style="width:20%;float:right;background-color:#e7f9fe;padding-bottom:3px">Cost</div>
+				</div>
 
-					<div style="width:100%;border-bottom:10px solid #000;">
-						<div style="width:80%;float:left;border-bottom:4px solid #d3d3d3;"><span id="dishName"></span></div>
-						<div style="width:20%;float:right; border-bottom:4px solid #d3d3d3;"><span id="dishPrice"></span></div>
-					</div>
-
+				<div style="width:100%;">
+					<div style="width:80%;float:left;border-bottom:4px solid #415667;padding-bottom:8px;"><span id="dishName"></span></div>
+					<div style="width:20%;float:right; border-bottom:4px solid #415667;padding-bottom:8px;"><span id="dishPrice"></span></div>
+				</div>
 					<br />
 					<br />
 					<div style="width:90%;padding:5px 0 0 0; border-top:0px solid #d3d3d3;">
 						<p align="right">SEK <span id="totalCost"></span></p>
 					</div>
 
-					<center><input class="btn btn-default" type="submit" value="Confirm Dinner"></center>
+					<center><input class="btn btn-default" type="submit" value="Confirm Dinner"style="margin-bottom:105%;"></center>
 				</div>
-				<div id='singleDishView' class="col-md-10">
+				<div id='singleDishView' class="col-md-9">
 					<div class="row">
-						<div id="left" class="col-md-5">
+						<div id="left" class="col-md-6">
 							
 						</div>
 
-						<div id="right" class="col-md-7">
+						<div id="right" class="col-md-6">
 
 							</div>
 

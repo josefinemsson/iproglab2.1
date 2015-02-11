@@ -23,7 +23,7 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		//TODO Lab 2
-		var id = chosenDishes.type;
+		var id = chosenDishes[type];
 		var dish = this.getDish(id);
 
 		return dish;
@@ -283,9 +283,9 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':101,
-		'name':'MD 2',
+		'name':'Filet Mignon',
 		'type':'main',
-		'image':'bakedbrie.jpg',
+		'image':'filet.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
@@ -305,9 +305,9 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':102,
-		'name':'MD 3',
+		'name':'Grilled Salmon',
 		'type':'main',
-		'image':'meatballs.jpg',
+		'image':'salmon.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
@@ -327,9 +327,9 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':102,
-		'name':'MD 4',
+		'name':'Green Salad',
 		'type':'main',
-		'image':'meatballs.jpg',
+		'image':'salad.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
@@ -349,9 +349,9 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':200,
-		'name':'Chocolat Ice cream',
+		'name':'Chocolate Ice cream',
 		'type':'dessert',
-		'image':'icecream.jpg',
+		'image':'chocice.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ice cream',
@@ -363,7 +363,7 @@ var DinnerModel = function() {
 		'id':201,
 		'name':'Vanilla Ice cream',
 		'type':'dessert',
-		'image':'icecream.jpg',
+		'image':'vice.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ice cream',
@@ -373,9 +373,9 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':202,
-		'name':'Strawberry',
+		'name':'Strawberry Ice cream',
 		'type':'dessert',
-		'image':'icecream.jpg',
+		'image':'strawice.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ice cream',
