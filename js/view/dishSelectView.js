@@ -7,7 +7,7 @@ var DishSelectView = function (container,model) {
 
 
 	var hehe = '';
-	var haha = model.getAllDishes('main');
+	var haha = model.getAllDishes('starter');
 
 	this.getDishes = function()
 	{ 
@@ -15,10 +15,9 @@ var DishSelectView = function (container,model) {
 		for(i=0;i<haha.length;i++)
 		{
 			var dish = haha[i];
-			hehe += "<div class='col-md-3'><br /><h4>"
+			hehe += "<div class='col-md-3'><br />"
 			hehe += "<center><img src=js/images/"+dish.image+' width=100%><br /><br/>';
-			hehe += dish.name;
-			hehe += "</h4></center>"
+			hehe += "<div id='foodhead'><h4><center>"+dish.name+"</center></h4></div>";
 			hehe += "<p>"+dish.description.substr(0, 80)+'...</p></div>'
 
 		}

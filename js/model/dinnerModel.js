@@ -38,18 +38,14 @@ var DinnerModel = function() {
 	this.getDishPrice = function(id) {
 
 		var dishPrice = 0;
-		
-		for(i=0;i<dishes.length;i++){
-			var dish = dishes[i];
 
-			if (dish.id === id) {
-				var ingredients = dish.ingredients;
+		var dish = this.getDish(id);
 
-				for (j=0;j<ingredients.length;j++){
-					var ingredient = ingredients[j];
-					dishPrice += ingredient.price;
-				}
-			}
+		var ingredients = dish.ingredients;
+
+		for (i=0;i<ingredients.length;i++){
+			var ingredient = ingredients[i];
+			dishPrice += ingredient.price;
 		}
 
 		return dishPrice*guestNumb;

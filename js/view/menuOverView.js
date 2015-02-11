@@ -33,14 +33,14 @@ var MenuOverView = function (container,model) {
 
 	this.getDishes = function(){
 
-		for(i=0;i<menu.length;i++){
-			var dish = menu[i];
+		for(k=0;k<menu.length;k++){
+			var dish = menu[k];
+			var price = model.getDishPrice(dish.id);
 
-			print2 += "<div class='col-md-2'><br /><h3>"
-			print2 += "<center><img src=js/images/"+dish.image+' width=100%><br /><br/>';
-			print2 += dish.name;
-			print2 += "</h3></center>"
-			print2 += "<p>"+dish.description.substr(0, 80)+'...</p></div>'
+			print2 += "<div class='col-md-2'><br />"
+			print2 += "<img src=js/images/"+dish.image+' width=100%><br /><br/>';
+			print2 += "<div id='foodhead'><h3><center>"+dish.name+"</center></h3></div>";
+			print2 += "<h3><center>"+price+' SEK</center></h3></div>'
 		}
 
 		return print2
