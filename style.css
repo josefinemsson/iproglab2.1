@@ -8,6 +8,39 @@ background-color: fff;
 font-family: "Helvetica neue", "Lucida Grande", sans-serif;
 color: #415667;
 }
+
+#start{
+	background-image: url('js/images/start.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#info
+{
+	background-color: rgba(65,86,103,0.7);
+	padding: 20px 10px 20px 10px;
+	color: #fff;
+}
+
+#info > h2{
+	color: #fff;
+}
+
+#startHeader{
+	padding-left: 40px;
+	background-color: rgba(132,169,62,0.7);
+	padding-bottom: 25px;
+	padding-top: 20px;
+}
+
+#foodRow {
+	padding: 20px;
+}
+
+#imageCol{
+	padding-top: 25px;
+}
+
 h1 {
 font-size: 70px;
 color: #fff;

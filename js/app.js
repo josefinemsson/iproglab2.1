@@ -7,5 +7,6 @@ $(function() {
 	var dishSelectView = new DishSelectView($("#dishSelectView"),model);
 	var singleDishView = new SingleDishView($("#singleDishView"),model);
 	var menuOverView = new MenuOverView($("#menuOverView"),model);
+	var printPageView = new PrintPageView($("#printPageView"),model);
 
 });
