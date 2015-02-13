@@ -7,7 +7,7 @@ var SingleDishView = function (container,model) {
 	var leftField = container.find("#left");
 
 
-	var food = model.getDish(1);
+	var food = model.getDish(101);
 
 
 	var print ='';

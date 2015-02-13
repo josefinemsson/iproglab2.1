@@ -12,12 +12,7 @@ var ExampleView = function (container,model) {
 	var dishPrice = container.find("#dishPrice");
 
 
-
-	model.addDishToMenu(200);
-	model.addDishToMenu(3);
-	model.addDishToMenu(101);
-
-//	model.removeDishFromMenu(2);
+	//model.removeDishFromMenu(3);
 
 
 	this.numberOfGuests.html(model.getNumberOfGuests);

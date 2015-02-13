@@ -44,7 +44,7 @@ var PrintPageView = function (container,model) {
 			for(j=0;j<ingredients.length;j++)
 				{
 					var ingredient = ingredients[j];
-					print2+= ingredient.quantity+' ';
+					print2+= ingredient.quantity*model.getNumberOfGuests()+' ';
 					print2+= ingredient.unit+' ';
 					print2+= ingredient.name+'<br/>';
 

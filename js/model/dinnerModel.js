@@ -1,7 +1,7 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
 
-	var guestNumb = 4;
+	var guestNumb = 2;
 	var chosenDishes = new Object();
 
 

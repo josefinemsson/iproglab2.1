@@ -6,11 +6,11 @@ var DishSelectView = function (container,model) {
 
 
 
-	var hehe = '';
 	var haha = model.getAllDishes('starter');
 
 	this.getDishes = function()
 	{ 
+		var hehe = '';
 		hehe += '<div class="row">'
 		for(i=0;i<haha.length;i++)
 		{
